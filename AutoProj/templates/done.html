@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Done</title>
+</head>
+<body>
+<!--<h1>done</h1>-->
+
+{% if messages %}
+        <ul class="messages">  {% for message in messages %}
+            {% if message.tags %}  {% endif %} {{ message }}
+            {% endfor %}</ul>
+        {% endif %}
+
+<table id="table" class="display" style="width: 100%;">
+  <thead>
+    <tr>
+        {% for header in columns %}
+      <th>{{header}}</th>
+        {% endfor %}
+    </tr>
+
+  </thead>
+  <tbody>
+      <tr>
+          {% for row in rows %}
+      <td>{{row }}</td>
+    </tr>
+   {% endfor %}
+
+  </tbody>
+</table>
+
+</body>
+</html>
